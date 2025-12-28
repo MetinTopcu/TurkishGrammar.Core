@@ -39,7 +39,7 @@ dotnet add package TurkishGrammar.Core
 
 ### English API
 
-```
+``` csharp
 using TurkishGrammar.Core.Extensions;
 
 // Case suffixes
@@ -59,7 +59,7 @@ using TurkishGrammar.Core.Extensions;
 
 ### Turkish API
 
-```
+``` csharp
 using TurkishGrammar.Core.Extensions.Tr;
 
 // Hal ekleri
@@ -79,7 +79,7 @@ using TurkishGrammar.Core.Extensions.Tr;
 
 ## Advanced Usage
 
-```
+``` csharp
 using TurkishGrammar.Core.Suffixes.Case;
 using TurkishGrammar.Core.Suffixes.Possessive;
 
@@ -96,19 +96,18 @@ PossessiveSuffixHelper.AddPossessive("masa", PossessivePerson.FirstPlural);
 
 The library automatically handles Turkish vowel harmony rules:
 
-```
+``` csharp
 "ev".ToLocative();    // evde
 "masa".ToLocative();  // masada
 "göl".ToLocative();   // gölde
 "kol".ToLocative();   // kolda
-
 ```
 
 ## Consonant Softening
 
 Automatic consonant softening (p→b, ç→c, t→d, k→ğ):
 
-```
+``` csharp
 "kitap".ToAccusative(); // kitabı
 "ağaç".ToAccusative();  // ağacı
 ```
