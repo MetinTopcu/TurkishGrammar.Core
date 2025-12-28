@@ -42,7 +42,9 @@ dotnet add package TurkishGrammar.Pro
 
 ## Pro Examples
 
-### Plural Suffixes
+### English API
+
+#### Plural Suffixes
 
 ```csharp
 using TurkishGrammar.Pro.Extensions;
@@ -52,7 +54,7 @@ var word2 = "masa".ToPlural();    // masalar (tables)
 var word3 = "kitap".ToPlural();   // kitaplar (books)
 ```
 
-### Question Particles
+#### Question Particles
 
 ```csharp
 var q1 = "geldin".ToQuestion();           // geldin mi (did you come?)
@@ -60,7 +62,7 @@ var q2 = "evde".ToQuestion();             // evde mi (at home?)
 var q3 = "öğrenci".ToNegativeQuestion();  // öğrenci değil mi (not a student?)
 ```
 
-### Combined Suffixes
+#### Combined Suffixes
 
 ```csharp
 // Plural + Possessive
@@ -72,7 +74,41 @@ var word3 = "kitap".ToPluralWithPossessive(PossessivePerson.FirstPlural);
 // kitaplarımız (our books)
 ```
 
+### Turkish API
+
+#### Çoğul Ekleri
+
+```csharp
+using TurkishGrammar.Pro.Extensions.Tr;
+
+var kelime1 = "ev".Çoğul();      // evler
+var kelime2 = "masa".Çoğul();    // masalar
+var kelime3 = "kitap".Çoğul();   // kitaplar
+```
+
+#### Soru Ekleri
+
+```csharp
+var s1 = "geldin".SoruEki();         // geldin mi
+var s2 = "evde".SoruEki();           // evde mi
+var s3 = "öğrenci".OlumsuzSoru();    // öğrenci değil mi
+```
+
+#### Birleşik Ekler
+
+```csharp
+// Çoğul + İyelik
+var kelime1 = "ev".BenimÇoğul();      // evlerim
+var kelime2 = "araba".BizimÇoğul();   // arabalarımız
+
+// Helper ile kullanım
+var kelime3 = "kitap".Çoğulİyelik(PossessivePerson.FirstPlural);
+// kitaplarımız
+```
+
 ### Advanced Chaining
+
+#### English API
 
 ```csharp
 using TurkishGrammar.Core.Extensions;
@@ -83,6 +119,19 @@ var word = "ev"
     .ToPlural()                    // evler
     .ToMyPossessive()              // evlerim (using Core)
     .ToDative();                   // evlerime (to my houses)
+```
+
+#### Turkish API
+
+```csharp
+using TurkishGrammar.Core.Extensions.Tr;
+using TurkishGrammar.Pro.Extensions.Tr;
+
+// Çoğul + İyelik + Hal
+var kelime = "ev"
+    .Çoğul()                       // evler
+    .Benim()                       // evlerim (Core'dan)
+    .YönelmeHali();                // evlerime
 ```
 
 ## Pricing

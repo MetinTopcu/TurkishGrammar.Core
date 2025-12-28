@@ -20,6 +20,8 @@ dotnet add package TurkishGrammar.Core
 
 ## Quick Start
 
+### English API
+
 ```csharp
 using TurkishGrammar.Core.Extensions;
 
@@ -35,6 +37,25 @@ var word6 = "okul".ToHisPossessive();   // okulu (his/her school)
 
 // Chaining
 var word7 = "ev".ToMyPossessive().ToDative(); // evime (to my house)
+```
+
+### Turkish API
+
+```csharp
+using TurkishGrammar.Core.Extensions.Tr;
+
+// Hal ekleri
+var kelime1 = "ev".YönelmeHali();    // eve
+var kelime2 = "masa".BulunmaHali();  // masada
+var kelime3 = "kitap".BelirtmeHali(); // kitabı
+
+// İyelik ekleri
+var kelime4 = "ev".Benim();     // evim
+var kelime5 = "araba".Senin();  // araban
+var kelime6 = "okul".Onun();    // okulu
+
+// Zincirleme kullanım
+var kelime7 = "ev".Benim().YönelmeHali(); // evime
 ```
 
 ## Advanced Usage
