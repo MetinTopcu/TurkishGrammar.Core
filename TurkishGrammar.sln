@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurkishGrammar.Core", "TurkishGrammar.Core\TurkishGrammar.Core.csproj", "{1004DA14-6849-4FEF-9B4B-717CC2CD41D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurkishGrammar.Pro", "TurkishGrammar.Pro\TurkishGrammar.Pro.csproj", "{BE638CE5-9985-467D-ADE5-75F29175C717}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurkishGrammar.Tests", "TurkishGrammar.Tests\TurkishGrammar.Tests.csproj", "{2B565658-5D29-4352-859B-991ED4A1A14B}"
 EndProject
 Global
@@ -31,18 +29,6 @@ Global
 		{1004DA14-6849-4FEF-9B4B-717CC2CD41D9}.Release|x64.Build.0 = Release|Any CPU
 		{1004DA14-6849-4FEF-9B4B-717CC2CD41D9}.Release|x86.ActiveCfg = Release|Any CPU
 		{1004DA14-6849-4FEF-9B4B-717CC2CD41D9}.Release|x86.Build.0 = Release|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Debug|x64.Build.0 = Debug|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Debug|x86.Build.0 = Debug|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Release|x64.ActiveCfg = Release|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Release|x64.Build.0 = Release|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Release|x86.ActiveCfg = Release|Any CPU
-		{BE638CE5-9985-467D-ADE5-75F29175C717}.Release|x86.Build.0 = Release|Any CPU
 		{2B565658-5D29-4352-859B-991ED4A1A14B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B565658-5D29-4352-859B-991ED4A1A14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B565658-5D29-4352-859B-991ED4A1A14B}.Debug|x64.ActiveCfg = Debug|Any CPU

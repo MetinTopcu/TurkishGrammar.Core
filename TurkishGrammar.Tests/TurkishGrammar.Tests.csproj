@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TurkishGrammar.Core\TurkishGrammar.Core.csproj" />
-    <ProjectReference Include="..\TurkishGrammar.Pro\TurkishGrammar.Pro.csproj" />
   </ItemGroup>
 
 </Project>

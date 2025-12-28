@@ -92,14 +92,17 @@ Automatic consonant softening (p→b, ç→c, t→d, k→ğ):
 "ağaç".ToAccusative()   // ağacı (ç→c)
 ```
 
-## Want More Features?
+## Need more?
 
-Upgrade to **TurkishGrammar.Pro** for advanced features:
-- Plural suffixes
-- Question particles
+TurkishGrammar.Core provides the fundamentals.
+
+For:
 - Verb conjugations
-- Comparative and superlative forms
-- And much more!
+- Smart question suffixes
+- Batch processing
+- Formal text helpers
+
+👉 Check **TurkishGrammar.Pro**
 
 ## License
 
