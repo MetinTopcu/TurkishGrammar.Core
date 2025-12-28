@@ -1,140 +1,138 @@
-# 📦 TurkishGrammar.Core
+# TurkishGrammar.Core
 
-**A .NET library for applying Turkish grammatical rules (suffixes, vowel harmony, consonant changes) in a deterministic and rule-based way.**
+A powerful and easy-to-use Turkish grammar library for .NET applications.
 
-Designed for enterprise use, legal texts, form generation, and dynamic content where correctness matters.
+TurkishGrammar.Core helps you correctly apply Turkish suffixes by automatically
+handling vowel harmony, consonant softening, and grammatical rules.
 
-**Looking for advanced features?** Check out [TurkishGrammar.Pro](https://github.com/YOUR_USERNAME/TurkishGrammar.Pro) for batch processing, formal text generation, verb conjugations, and more.
-
----
-
-## ✨ Features
-
-- **Case suffixes** (Accusative, Dative, Locative, Ablative, Instrumental)
-- **Possessive suffixes** (benim, senin, onun, bizim, sizin, onların)
-- **Vowel harmony** & **consonant softening**
-- **Fully offline**, no dependencies
+**Tags:** turkish, grammar, nlp, suffix, dotnet
 
 ---
 
-## 📦 Installation
+## Features (Core – Free)
+
+- **Vowel Harmony Rules**  
+  Automatic Turkish vowel harmony detection and application
+
+- **Case Suffixes**  
+  Accusative, dative, locative, ablative, instrumental
+
+- **Possessive Suffixes**  
+  My, your, his/her, our, your (plural), their
+
+- **Consonant Softening**  
+  Automatic handling of p→b, ç→c, t→d, k→ğ
+
+- **Fluent API**  
+  Clean, readable, and chainable extension methods
+
+---
+
+## Installation
 
 ```bash
 dotnet add package TurkishGrammar.Core
+
 ```
 
----
-
-## 🚀 Usage
+## Quick Start
 
 ### English API
 
-```csharp
+``` csharp
 using TurkishGrammar.Core.Extensions;
 
-"ev".ToLocative();                      // evde
-"masa".ToDative();                      // masaya
-"ev".ToMyPossessive();                  // evim
-"kitap".WithCase(CaseType.Ablative);    // kitaptan
+// Case suffixes
+"ev".ToDative();        // eve
+"masa".ToLocative();    // masada
+"kitap".ToAccusative(); // kitabı
+
+// Possessive suffixes
+"ev".ToMyPossessive();       // evim
+"araba".ToYourPossessive();  // araban
+"okul".ToHisPossessive();    // okulu
+
+// Chaining
+"ev".ToMyPossessive().ToDative(); // evime
+
 ```
 
-### Turkish API (optional)
+### Turkish API
 
-```csharp
+``` csharp
 using TurkishGrammar.Core.Extensions.Tr;
 
-"ev".BulunmaHali();     // evde
-"masa".YönelmeHali();   // masaya
-"ev".Benim();           // evim
+// Hal ekleri
+"ev".YönelmeHali();      // eve
+"masa".BulunmaHali();    // masada
+"kitap".BelirtmeHali();  // kitabı
+
+// İyelik ekleri
+"ev".Benim();     // evim
+"araba".Senin();  // araban
+"okul".Onun();    // okulu
+
+// Zincirleme kullanım
+"ev".Benim().YönelmeHali(); // evime
+
 ```
 
----
+## Advanced Usage
 
-## 🧠 Design Philosophy
+``` csharp
+using TurkishGrammar.Core.Suffixes.Case;
+using TurkishGrammar.Core.Suffixes.Possessive;
 
-- **Deterministic**: No guessing, no NLP, no AI
-- **Explicit**: The caller always chooses which suffix to apply
-- **Offline-first**: Safe for legal and enterprise systems
-- **Extensible**: Core logic is shared, Turkish aliases are thin wrappers
+// Using helpers directly
+CaseSuffixHelper.AddCase("kitap", CaseType.Locative);
+// kitapta
 
----
+PossessiveSuffixHelper.AddPossessive("masa", PossessivePerson.FirstPlural);
+// masamız
 
-## 🚀 Roadmap
-
-- [ ] Proper noun & abbreviation support
-- [ ] Numeric suffixes (3'e, 2025'te)
-- [ ] Additional suffix types
-- [ ] Performance optimizations
-
----
-
-## 📄 License
-
-MIT License - Free and open source
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-## 🌟 Examples
-
-### Chaining (English API)
-
-```csharp
-using TurkishGrammar.Core.Extensions;
-
-var result = "ev"
-    .ToMyPossessive()     // evim
-    .ToDative();          // evime (to my house)
 ```
 
-### Chaining (Turkish API)
+## Vowel Harmony
 
-```csharp
-using TurkishGrammar.Core.Extensions.Tr;
+The library automatically handles Turkish vowel harmony rules:
 
-var sonuc = "ev"
-    .Benim()              // evim
-    .YönelmeHali();       // evime
+``` csharp
+"ev".ToLocative();    // evde
+"masa".ToLocative();  // masada
+"göl".ToLocative();   // gölde
+"kol".ToLocative();   // kolda
 ```
 
-### Vowel Harmony
+## Consonant Softening
 
-```csharp
-"ev".ToLocative();      // evde (front vowel)
-"masa".ToLocative();    // masada (back vowel)
-"göl".ToLocative();     // gölde (front rounded)
-"kol".ToLocative();     // kolda (back rounded)
+Automatic consonant softening (p→b, ç→c, t→d, k→ğ):
+
+``` csharp
+"kitap".ToAccusative(); // kitabı
+"ağaç".ToAccusative();  // ağacı
 ```
 
-### Consonant Softening
+## Need more?
 
-```csharp
-"kitap".ToAccusative(); // kitabı (p→b)
-"ağaç".ToAccusative();  // ağacı (ç→c)
-```
+TurkishGrammar.Core provides the fundamentals.
 
----
+If you need advanced features such as:
 
-## 💡 Use Cases
+Verb conjugations
 
-- **Legal documents**: Generate contracts with correct Turkish grammar
-- **Form generation**: Dynamic forms with proper suffixes
-- **E-commerce**: Product descriptions with correct case endings
-- **Educational apps**: Turkish language learning tools
-- **Government systems**: Official documents and forms
-- **Content management**: Dynamic content with grammatical correctness
+Smart question suffixes
 
----
+Batch processing (1000+ words)
 
-## 🔗 Links
+Formal & legal text helpers
 
-- [NuGet Package](https://www.nuget.org/packages/TurkishGrammar.Core)
-- [TurkishGrammar.Pro](https://github.com/YOUR_USERNAME/TurkishGrammar.Pro) - Advanced features (commercial license)
+👉 Check TurkishGrammar.Pro
 
----
+## License
 
+MIT License
+
+## Contributing
+
+Contributions are welcome!
+Feel free to open an issue or submit a Pull Request.
