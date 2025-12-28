@@ -2,107 +2,132 @@
 
 A powerful and easy-to-use Turkish grammar library for .NET applications.
 
-## Features
+TurkishGrammar.Core helps you correctly apply Turkish suffixes by automatically
+handling vowel harmony, consonant softening, and grammatical rules.
 
-### Core Version (Free)
+**Tags:** turkish, grammar, nlp, suffix, dotnet
 
-- **Vowel Harmony Rules**: Automatic Turkish vowel harmony detection and application
-- **Possessive Suffixes**: Add possessive endings to words (benim, senin, onun, etc.)
-- **Case Suffixes**: Apply Turkish case endings (accusative, dative, locative, ablative, instrumental)
-- **Consonant Softening**: Automatic handling of Turkish consonant softening rules
-- **Fluent API**: Clean and intuitive extension methods
+---
+
+## Features (Core – Free)
+
+- **Vowel Harmony Rules**  
+  Automatic Turkish vowel harmony detection and application
+
+- **Case Suffixes**  
+  Accusative, dative, locative, ablative, instrumental
+
+- **Possessive Suffixes**  
+  My, your, his/her, our, your (plural), their
+
+- **Consonant Softening**  
+  Automatic handling of p→b, ç→c, t→d, k→ğ
+
+- **Fluent API**  
+  Clean, readable, and chainable extension methods
+
+---
 
 ## Installation
 
 ```bash
 dotnet add package TurkishGrammar.Core
+
 ```
 
 ## Quick Start
 
 ### English API
 
-```csharp
+```
 using TurkishGrammar.Core.Extensions;
 
 // Case suffixes
-var word1 = "ev".ToDative();        // eve (to the house)
-var word2 = "masa".ToLocative();    // masada (at the table)
-var word3 = "kitap".ToAccusative(); // kitabı (the book - object)
+"ev".ToDative();        // eve
+"masa".ToLocative();    // masada
+"kitap".ToAccusative(); // kitabı
 
 // Possessive suffixes
-var word4 = "ev".ToMyPossessive();     // evim (my house)
-var word5 = "araba".ToYourPossessive(); // araban (your car)
-var word6 = "okul".ToHisPossessive();   // okulu (his/her school)
+"ev".ToMyPossessive();       // evim
+"araba".ToYourPossessive();  // araban
+"okul".ToHisPossessive();    // okulu
 
 // Chaining
-var word7 = "ev".ToMyPossessive().ToDative(); // evime (to my house)
+"ev".ToMyPossessive().ToDative(); // evime
+
 ```
 
 ### Turkish API
 
-```csharp
+```
 using TurkishGrammar.Core.Extensions.Tr;
 
 // Hal ekleri
-var kelime1 = "ev".YönelmeHali();    // eve
-var kelime2 = "masa".BulunmaHali();  // masada
-var kelime3 = "kitap".BelirtmeHali(); // kitabı
+"ev".YönelmeHali();      // eve
+"masa".BulunmaHali();    // masada
+"kitap".BelirtmeHali();  // kitabı
 
 // İyelik ekleri
-var kelime4 = "ev".Benim();     // evim
-var kelime5 = "araba".Senin();  // araban
-var kelime6 = "okul".Onun();    // okulu
+"ev".Benim();     // evim
+"araba".Senin();  // araban
+"okul".Onun();    // okulu
 
 // Zincirleme kullanım
-var kelime7 = "ev".Benim().YönelmeHali(); // evime
+"ev".Benim().YönelmeHali(); // evime
+
 ```
 
 ## Advanced Usage
 
-```csharp
+```
 using TurkishGrammar.Core.Suffixes.Case;
 using TurkishGrammar.Core.Suffixes.Possessive;
 
 // Using helpers directly
-var word1 = CaseSuffixHelper.AddCase("kitap", CaseType.Locative);
-// kitapta (in the book)
+CaseSuffixHelper.AddCase("kitap", CaseType.Locative);
+// kitapta
 
-var word2 = PossessiveSuffixHelper.AddPossessive("masa", PossessivePerson.FirstPlural);
-// masamız (our table)
+PossessiveSuffixHelper.AddPossessive("masa", PossessivePerson.FirstPlural);
+// masamız
+
 ```
 
 ## Vowel Harmony
 
 The library automatically handles Turkish vowel harmony rules:
 
-```csharp
-"ev".ToLocative()    // evde (front vowel)
-"masa".ToLocative()  // masada (back vowel)
-"göl".ToLocative()   // gölde (front rounded)
-"kol".ToLocative()   // kolda (back rounded)
+```
+"ev".ToLocative();    // evde
+"masa".ToLocative();  // masada
+"göl".ToLocative();   // gölde
+"kol".ToLocative();   // kolda
+
 ```
 
 ## Consonant Softening
 
 Automatic consonant softening (p→b, ç→c, t→d, k→ğ):
 
-```csharp
-"kitap".ToAccusative()  // kitabı (p→b)
-"ağaç".ToAccusative()   // ağacı (ç→c)
+```
+"kitap".ToAccusative(); // kitabı
+"ağaç".ToAccusative();  // ağacı
 ```
 
 ## Need more?
 
 TurkishGrammar.Core provides the fundamentals.
 
-For:
-- Verb conjugations
-- Smart question suffixes
-- Batch processing
-- Formal text helpers
+If you need advanced features such as:
 
-👉 Check **TurkishGrammar.Pro**
+Verb conjugations
+
+Smart question suffixes
+
+Batch processing (1000+ words)
+
+Formal & legal text helpers
+
+👉 Check TurkishGrammar.Pro
 
 ## License
 
@@ -110,4 +135,5 @@ MIT License
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome!
+Feel free to open an issue or submit a Pull Request.
