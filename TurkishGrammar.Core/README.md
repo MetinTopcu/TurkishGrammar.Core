@@ -136,3 +136,10 @@ MIT License
 
 Contributions are welcome!
 Feel free to open an issue or submit a Pull Request.
+
+## Need more?
+
+For verb conjugations, batch processing, and formal/legal text helpers  
+check out **TurkishGrammar.Pro**.
+
+👉 https://fog-pyjama-da9.notion.site/TURKISHGRAMMAR-PRO-2d74f95f6595804fa273c60246047f95
