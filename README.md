@@ -52,11 +52,13 @@ Pro adds advanced and expressive grammar features on top of Core.
 
 ### Features
 
-- **Verb tenses** & **moods**
+- **🚀 Batch Processing** (KILLER FEATURE!) - Process 1000+ words in parallel
+- **📄 Formal & Legal Text** (KILLER FEATURE!) - Contract generation, legal clauses, official language
+- **Verb tenses** & **moods** - Full conjugation support
 - **Adjectives** (comparative, superlative)
 - **Plural** & **question particles**
 - **Optimized helpers** for large-scale text generation
-- Designed for **professional / commercial** usage
+- Designed for **enterprise / government / legal** usage
 
 ### Installation
 
@@ -68,10 +70,21 @@ dotnet add package TurkishGrammar.Pro
 
 ```csharp
 using TurkishGrammar.Pro.Extensions;
+using TurkishGrammar.Pro.Formal;
 
-"güzel".ToSuperlative();         // en güzel
+// Batch processing - Process 1000+ words
+var words = new[] { "ev", "masa", "kitap" };
+words.ToLocative();              // ["evde", "masada", "kitapta"]
+
+// Legal & Formal text
+LegalTextHelper.ArticleReference(5);              // "5. madde"
+ContractHelper.PaymentClause(10000m, "30 gün");   // Legal payment clause
+"yap".ToFormalRequest();                          // "yapılması rica olunur"
+
+// Verb conjugations
 "gel".ToPresentContinuous_I();   // geliyorum
 "git".ToFutureTense_You();       // gideceksin
+"güzel".ToSuperlative();         // en güzel
 "ev".ToPlural();                 // evler
 ```
 
