@@ -128,18 +128,28 @@ Formal & legal text helpers
 
 👉 Check TurkishGrammar.Pro
 
-## License
+### 💰 Pricing (One-Time Payment)
 
-MIT License
+- **Developer License** — $29  
+  For individual developers & freelance projects
 
-## Contributing
+- **Company License** — $99  
+  For commercial & enterprise usage
 
-Contributions are welcome!
-Feel free to open an issue or submit a Pull Request.
+### 🛒 Buy & Get Instant Access
 
-## Need more?
+👉 **Buy TurkishGrammar.Pro**  
+https://topcumetincom.lemonsqueezy.com/checkout/buy/312ff967-cfcc-44e3-9b8f-51709783204a
 
-For verb conjugations, batch processing, and formal/legal text helpers  
-check out **TurkishGrammar.Pro**.
+> License key is delivered instantly after purchase.
 
-👉 https://fog-pyjama-da9.notion.site/TURKISHGRAMMAR-PRO-2d74f95f6595804fa273c60246047f95
+---
+
+### ⚖️ Licensing Notice
+
+- **TurkishGrammar.Core** is MIT licensed and free to use.
+- **TurkishGrammar.Pro** is a commercial product and requires a valid license key.
+
+---
+
+Built for developers who need **correct Turkish — not guesses**.
